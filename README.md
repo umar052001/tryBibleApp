@@ -44,9 +44,9 @@ BibleQA seamlessly integrates with trusted payment processors. You can acquire s
 
 Securely manage your BibleQA experience with easy login and logout through trusted authentication providers. Create and personalize your account for a seamless spiritual journey.
 
-**Screenshots:**
+**Figma Design:**
 
-[Add captivating screenshots of the mobile and web app showcasing the spiritual journey]
+![Main Theme](https://raw.githubusercontent.com/umar052001/tryBibleApp/adding-figma-design/assets/figma-design-1.png)
 
 **Contributing:**
 
