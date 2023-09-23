@@ -6,6 +6,7 @@ import 'package:noor_e_tafseer/widgets/button.dart';
 import 'package:noor_e_tafseer/widgets/textfield.dart';
 
 import '../constants/routes.dart';
+import '../utils/snackbar.dart';
 
 class ForgotPasswordView extends StatefulWidget {
   const ForgotPasswordView({super.key});
@@ -105,22 +106,15 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                       verificationCodeRoute,
                     );
                   } else {
-                    final snackBar = SnackBar(
-                      elevation: 0,
-                      behavior: SnackBarBehavior.floating,
-                      backgroundColor: Colors.transparent,
-                      content: AwesomeSnackbarContent(
-                        title: 'Oh Snap!',
-                        message: 'You entered an incorrect email!',
-
-                        /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
-                        contentType: ContentType.failure,
-                      ),
-                    );
-
                     ScaffoldMessenger.of(context)
                       ..hideCurrentSnackBar()
-                      ..showSnackBar(snackBar);
+                      ..showSnackBar(
+                        buildCustomSnackBar(
+                          'Oh Snap!',
+                          'You entered an incorrect email!',
+                          ContentType.failure,
+                        ),
+                      );
                   }
                 },
                 label: 'Next',
