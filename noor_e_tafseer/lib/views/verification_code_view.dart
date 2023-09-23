@@ -151,7 +151,7 @@ class _VerificationCodeViewState extends State<VerificationCodeView> {
                       ..hideCurrentSnackBar()
                       ..showSnackBar(
                         buildCustomSnackBar(
-                          'Oh Snap',
+                          'Oh Snap!',
                           'The verification code you entered doesn\'t match the code we sent you!',
                           ContentType.failure,
                         ),
