@@ -1,7 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:noor_e_tafseer/constants/colors.dart';
+import 'package:noor_e_tafseer/components/page_introductory_header.dart';
 import 'package:noor_e_tafseer/widgets/button.dart';
 import 'package:noor_e_tafseer/widgets/textfield.dart';
 
@@ -43,39 +43,11 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 80.0),
-              child: FaIcon(
-                FontAwesomeIcons.lock, // Set the desired Font Awesome icon
-                size: 60,
-                color: AppColors.darkTextColor,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 30.0),
-              child: Text(
-                "Forget Password",
-                style: TextStyle(
-                  color: Color(0xFF1E1E1E),
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                  top: 10.0, left: 30.0, right: 30.0, bottom: 30.0),
-              child: Text(
-                "Provide your account's email for which you want to reset your password!",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF1E1E1E),
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
+            const PageIntroductoryHeader(
+              icon: FontAwesomeIcons.lock,
+              title: 'Forget Password',
+              description:
+                  "Provide your account's email for which you want to reset your password!",
             ),
             Padding(
               padding: const EdgeInsets.only(

@@ -1,6 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:noor_e_tafseer/components/page_introductory_header.dart';
 import 'package:noor_e_tafseer/widgets/button.dart';
 
 import '../constants/routes.dart';
@@ -44,47 +45,11 @@ class _NewPasswordViewState extends State<NewPasswordView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(
-                top: 50.0,
-              ),
-              child: FaIcon(
-                FontAwesomeIcons.lockOpen,
-                size: 60,
-                color: Colors.black,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                top: 20.0,
-              ),
-              child: Text(
-                "New Password",
-                style: TextStyle(
-                  color: Color(0xFF1E1E1E),
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                top: 10.0,
-                left: 30.0,
-                right: 30.0,
-                bottom: 20.0,
-              ),
-              child: Text(
-                "Your identity has been verified!\nSet your new password.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF1E1E1E),
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
+            const PageIntroductoryHeader(
+              icon: FontAwesomeIcons.lockOpen,
+              title: 'New Password',
+              description:
+                  'Your identity has been verified!\nSet your new password.',
             ),
             Padding(
               padding: const EdgeInsets.only(

@@ -1,6 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:noor_e_tafseer/components/page_introductory_header.dart';
 import 'package:noor_e_tafseer/constants/colors.dart';
 import 'package:noor_e_tafseer/widgets/button.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -45,39 +46,11 @@ class _VerificationCodeViewState extends State<VerificationCodeView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 80.0),
-              child: FaIcon(
-                FontAwesomeIcons.key,
-                size: 60,
-                color: Colors.black,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 30.0),
-              child: Text(
-                "Verification",
-                style: TextStyle(
-                  color: AppColors.darkTextColor,
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                  top: 10.0, left: 50.0, right: 50.0, bottom: 30.0),
-              child: Text(
-                "Enter the one time password that was sent to your email.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: AppColors.darkTextColor,
-                  fontFamily: 'SF Pro Display',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
+            const PageIntroductoryHeader(
+              icon: FontAwesomeIcons.key,
+              title: 'Verification',
+              description:
+                  'Enter the one time password that was sent to your email.',
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
