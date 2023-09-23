@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constants/routes.dart';
+import 'views/forgot_password.dart';
 import 'views/login_view.dart';
 import 'views/register_view.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
+        forgotPasswordRoute: (context) => const ForgotPasswordView(),
       },
     );
   }
